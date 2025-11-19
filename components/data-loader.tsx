@@ -5,33 +5,23 @@ import { useDataStore } from '@/hooks/use-data-store'
 
 export function DataLoader({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true)
-  
-  const setEmployees = useDataStore((state) => {
-    return (employees: any[]) => {
-      // Directly update the store by calling addEmployee or through a batch method
-      state.employees = employees
-    }
-  })
+  const setBatchData = useDataStore((state) => state.setBatchData)
 
   useEffect(() => {
     async function loadData() {
       try {
         console.log('[v0] Starting data load from database...')
         
-        const [employees, customers, transactions, salaryPayments] = await Promise.all([
+        const [employeesRes, customersRes, transactionsRes, salaryPaymentsRes] = await Promise.all([
           fetch('/api/employees').then(r => r.json()).catch(() => []),
           fetch('/api/customers').then(r => r.json()).catch(() => []),
           fetch('/api/transactions').then(r => r.json()).catch(() => []),
           fetch('/api/salary-payments').then(r => r.json()).catch(() => []),
         ])
 
-        console.log('[v0] Data loaded:', { employees, customers, transactions, salaryPayments })
+        console.log('[v0] Data loaded from database')
 
-        // Update store with loaded data
-        const store = useDataStore.getState()
-        
-        // Clear existing data and load from database
-        store.employees = employees.map((e: any) => ({
+        const employees = employeesRes.map((e: any) => ({
           id: e.id,
           name: e.name,
           phone: e.phone,
@@ -41,7 +31,7 @@ export function DataLoader({ children }: { children: React.ReactNode }) {
           status: e.status,
         }))
 
-        store.customers = customers.map((c: any) => ({
+        const customers = customersRes.map((c: any) => ({
           id: c.id,
           name: c.name,
           phone: c.phone,
@@ -49,7 +39,7 @@ export function DataLoader({ children }: { children: React.ReactNode }) {
           totalTransactions: c.total_transactions || 0,
         }))
 
-        store.transactions = transactions.map((t: any) => ({
+        const transactions = transactionsRes.map((t: any) => ({
           id: t.id,
           customerId: t.customer_id,
           employeeId: t.employee_id,
@@ -62,13 +52,15 @@ export function DataLoader({ children }: { children: React.ReactNode }) {
           status: t.status,
         }))
 
-        store.salaryPayments = salaryPayments.map((p: any) => ({
+        const salaryPayments = salaryPaymentsRes.map((p: any) => ({
           id: p.id,
           employeeId: p.employee_id,
           amount: Number(p.amount),
           paymentDate: p.payment_date,
         }))
 
+        // Call batch setter once with all data
+        setBatchData({ employees, customers, transactions, salaryPayments })
         console.log('[v0] Store updated successfully')
       } catch (error) {
         console.error('[v0] Error loading data:', error)
@@ -78,7 +70,7 @@ export function DataLoader({ children }: { children: React.ReactNode }) {
     }
 
     loadData()
-  }, [])
+  }, [setBatchData])
 
   if (isLoading) {
     return (

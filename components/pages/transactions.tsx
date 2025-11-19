@@ -6,10 +6,15 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Trash2, Edit2, Plus, Check } from 'lucide-react'
 import { TransactionForm } from '@/components/forms/transaction-form'
+import { DeleteConfirmationDialog } from '@/components/delete-confirmation-dialog'
+import { ToastContainer, ToastType } from '@/components/toast-notification'
 
 export function TransactionsPage() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [editingTransaction, setEditingTransaction] = useState<Transaction | null>(null)
+  const [deleteConfirm, setDeleteConfirm] = useState<{ open: boolean; id: string }>({ open: false, id: '' })
+  const [toasts, setToasts] = useState<Array<{ id: string; message: string; type: ToastType }>>([])
+  
   const transactions = useDataStore((state) => state.transactions)
   const addTransaction = useDataStore((state) => state.addTransaction)
   const updateTransaction = useDataStore((state) => state.updateTransaction)
@@ -17,11 +22,22 @@ export function TransactionsPage() {
   const customers = useDataStore((state) => state.customers)
   const employees = useDataStore((state) => state.employees)
 
+  const addToast = (message: string, type: ToastType) => {
+    const id = Date.now().toString()
+    setToasts((prev) => [...prev, { id, message, type }])
+  }
+
+  const removeToast = (id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id))
+  }
+
   const handleSave = (data: Omit<Transaction, 'id'>) => {
     if (editingTransaction) {
       updateTransaction(editingTransaction.id, data)
+      addToast('Transaction updated successfully', 'success')
     } else {
       addTransaction(data)
+      addToast('Transaction added successfully', 'success')
     }
     setIsFormOpen(false)
     setEditingTransaction(null)
@@ -31,7 +47,18 @@ export function TransactionsPage() {
     const trans = transactions.find((t) => t.id === id)
     if (trans) {
       updateTransaction(id, { ...trans, status: 'completed' })
+      addToast('Transaction marked as completed', 'success')
     }
+  }
+
+  const handleDeleteClick = (id: string) => {
+    setDeleteConfirm({ open: true, id })
+  }
+
+  const handleConfirmDelete = () => {
+    deleteTransaction(deleteConfirm.id)
+    addToast('Transaction deleted successfully', 'success')
+    setDeleteConfirm({ open: false, id: '' })
   }
 
   const getCustomerName = (id: string) => customers.find((c) => c.id === id)?.name || 'Unknown'
@@ -123,7 +150,7 @@ export function TransactionsPage() {
                         <Edit2 className="w-4 h-4" />
                       </Button>
                       <Button
-                        onClick={() => deleteTransaction(trans.id)}
+                        onClick={() => handleDeleteClick(trans.id)}
                         variant="ghost"
                         size="sm"
                         className="text-rose-600 hover:bg-rose-50"
@@ -138,6 +165,16 @@ export function TransactionsPage() {
           </table>
         </div>
       </Card>
+
+      <DeleteConfirmationDialog
+        open={deleteConfirm.open}
+        title="Delete Transaction"
+        description="Are you sure you want to delete this transaction? This action cannot be undone."
+        onConfirm={handleConfirmDelete}
+        onCancel={() => setDeleteConfirm({ open: false, id: '' })}
+      />
+
+      <ToastContainer toasts={toasts} onRemove={removeToast} />
     </div>
   )
 }

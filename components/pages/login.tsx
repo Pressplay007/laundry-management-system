@@ -1,20 +1,28 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { useNavigation } from '@/context/navigation-context'
 import { useDataStore } from '@/hooks/use-data-store'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 
-export function LoginPage() {
+export default function LoginPage() {
+
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const [isReady, setIsReady] = useState(false)
+  const router = useRouter()
   
-  const { setIsAuthenticated } = useNavigation()
-  const { login } = useDataStore()
+  const navigation = useNavigation()
+  const store = useDataStore()
+
+  useEffect(() => {
+    setIsReady(true)
+  }, [])
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -22,15 +30,20 @@ export function LoginPage() {
     setLoading(true)
 
     try {
-      const success = login(username, password)
+      const success = store.login(username, password)
       if (success) {
-        setIsAuthenticated(true)
+        navigation.setIsAuthenticated(true)
+        router.push('/dashboard')
       } else {
         setError('Invalid username or password')
       }
     } finally {
       setLoading(false)
     }
+  }
+
+  if (!isReady) {
+    return null
   }
 
   return (

@@ -6,23 +6,49 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Trash2, Edit2, Plus } from 'lucide-react'
 import { CustomerForm } from '@/components/forms/customer-form'
+import { DeleteConfirmationDialog } from '@/components/delete-confirmation-dialog'
+import { ToastContainer, ToastType } from '@/components/toast-notification'
 
 export function CustomersPage() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [editingCustomer, setEditingCustomer] = useState<Customer | null>(null)
+  const [deleteConfirm, setDeleteConfirm] = useState<{ open: boolean; id: string; name: string }>({ open: false, id: '', name: '' })
+  const [toasts, setToasts] = useState<Array<{ id: string; message: string; type: ToastType }>>([])
+  
   const customers = useDataStore((state) => state.customers)
   const addCustomer = useDataStore((state) => state.addCustomer)
   const updateCustomer = useDataStore((state) => state.updateCustomer)
   const deleteCustomer = useDataStore((state) => state.deleteCustomer)
 
+  const addToast = (message: string, type: ToastType) => {
+    const id = Date.now().toString()
+    setToasts((prev) => [...prev, { id, message, type }])
+  }
+
+  const removeToast = (id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id))
+  }
+
   const handleSave = (data: Omit<Customer, 'id'>) => {
     if (editingCustomer) {
       updateCustomer(editingCustomer.id, data)
+      addToast('Customer updated successfully', 'success')
     } else {
       addCustomer(data)
+      addToast('Customer added successfully', 'success')
     }
     setIsFormOpen(false)
     setEditingCustomer(null)
+  }
+
+  const handleDeleteClick = (cust: Customer) => {
+    setDeleteConfirm({ open: true, id: cust.id, name: cust.name })
+  }
+
+  const handleConfirmDelete = () => {
+    deleteCustomer(deleteConfirm.id)
+    addToast(`Customer "${deleteConfirm.name}" deleted successfully`, 'success')
+    setDeleteConfirm({ open: false, id: '', name: '' })
   }
 
   return (
@@ -85,7 +111,7 @@ export function CustomersPage() {
                         <Edit2 className="w-4 h-4" />
                       </Button>
                       <Button
-                        onClick={() => deleteCustomer(cust.id)}
+                        onClick={() => handleDeleteClick(cust)}
                         variant="ghost"
                         size="sm"
                         className="text-rose-600 hover:bg-rose-50"
@@ -100,6 +126,16 @@ export function CustomersPage() {
           </table>
         </div>
       </Card>
+
+      <DeleteConfirmationDialog
+        open={deleteConfirm.open}
+        title="Delete Customer"
+        description={`Are you sure you want to delete "${deleteConfirm.name}"? This action cannot be undone.`}
+        onConfirm={handleConfirmDelete}
+        onCancel={() => setDeleteConfirm({ open: false, id: '', name: '' })}
+      />
+
+      <ToastContainer toasts={toasts} onRemove={removeToast} />
     </div>
   )
 }

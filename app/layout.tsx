@@ -30,14 +30,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className="font-sans antialiased">
         <NavigationProvider>
           {children}
         </NavigationProvider>

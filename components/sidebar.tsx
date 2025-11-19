@@ -1,27 +1,32 @@
 'use client'
 
-import { useNavigation } from '@/context/navigation-context'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 import { useDataStore } from '@/hooks/use-data-store'
+import { useNavigation } from '@/context/navigation-context'
 import { Button } from '@/components/ui/button'
 import { LayoutDashboard, Users, ShoppingCart, Receipt, Bell, DollarSign, BarChart3, LogOut } from 'lucide-react'
 
 export function Sidebar() {
-  const { currentPage, setCurrentPage, setIsAuthenticated } = useNavigation()
+  const pathname = usePathname()
+  const router = useRouter()
   const { currentAdmin, logout } = useDataStore()
+  const { setIsAuthenticated } = useNavigation()
 
   const navItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'employees', label: 'Employees', icon: Users },
-    { id: 'customers', label: 'Customers', icon: ShoppingCart },
-    { id: 'transactions', label: 'Transactions', icon: Receipt },
-    { id: 'notifications', label: 'Notifications', icon: Bell },
-    { id: 'salary', label: 'Salary Payment', icon: DollarSign },
-    { id: 'reports', label: 'Reports', icon: BarChart3 },
+    { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { href: '/employees', label: 'Employees', icon: Users },
+    { href: '/customers', label: 'Customers', icon: ShoppingCart },
+    { href: '/transactions', label: 'Transactions', icon: Receipt },
+    { href: '/notifications', label: 'Notifications', icon: Bell },
+    { href: '/salary', label: 'Salary Payment', icon: DollarSign },
+    { href: '/reports', label: 'Reports', icon: BarChart3 },
   ]
 
   const handleLogout = () => {
     logout()
     setIsAuthenticated(false)
+    router.push('/')
   }
 
   return (
@@ -41,19 +46,19 @@ export function Sidebar() {
       <nav className="space-y-2 flex-1">
         {navItems.map((item) => {
           const Icon = item.icon
-          const isActive = currentPage === item.id
+          const isActive = pathname === item.href
           return (
-            <Button
-              key={item.id}
-              onClick={() => setCurrentPage(item.id as any)}
-              variant={isActive ? 'default' : 'ghost'}
-              className={`w-full justify-start gap-3 ${
-                isActive ? 'bg-cyan-600 hover:bg-cyan-700' : 'hover:bg-slate-700'
-              }`}
-            >
-              <Icon className="w-5 h-5" />
-              {item.label}
-            </Button>
+            <Link key={item.href} href={item.href}>
+              <Button
+                variant={isActive ? 'default' : 'ghost'}
+                className={`w-full justify-start gap-3 ${
+                  isActive ? 'bg-cyan-600 hover:bg-cyan-700' : 'hover:bg-slate-700'
+                }`}
+              >
+                <Icon className="w-5 h-5" />
+                {item.label}
+              </Button>
+            </Link>
           )
         })}
       </nav>

@@ -6,23 +6,49 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Trash2, Edit2, Plus } from 'lucide-react'
 import { EmployeeForm } from '@/components/forms/employee-form'
+import { DeleteConfirmationDialog } from '@/components/delete-confirmation-dialog'
+import { ToastContainer, ToastType } from '@/components/toast-notification'
 
 export function EmployeesPage() {
   const [isFormOpen, setIsFormOpen] = useState(false)
   const [editingEmployee, setEditingEmployee] = useState<Employee | null>(null)
+  const [deleteConfirm, setDeleteConfirm] = useState<{ open: boolean; id: string; name: string }>({ open: false, id: '', name: '' })
+  const [toasts, setToasts] = useState<Array<{ id: string; message: string; type: ToastType }>>([])
+  
   const employees = useDataStore((state) => state.employees)
   const addEmployee = useDataStore((state) => state.addEmployee)
   const updateEmployee = useDataStore((state) => state.updateEmployee)
   const deleteEmployee = useDataStore((state) => state.deleteEmployee)
 
+  const addToast = (message: string, type: ToastType) => {
+    const id = Date.now().toString()
+    setToasts((prev) => [...prev, { id, message, type }])
+  }
+
+  const removeToast = (id: string) => {
+    setToasts((prev) => prev.filter((t) => t.id !== id))
+  }
+
   const handleSave = (data: Omit<Employee, 'id'>) => {
     if (editingEmployee) {
       updateEmployee(editingEmployee.id, data)
+      addToast('Employee updated successfully', 'success')
     } else {
       addEmployee(data)
+      addToast('Employee added successfully', 'success')
     }
     setIsFormOpen(false)
     setEditingEmployee(null)
+  }
+
+  const handleDeleteClick = (emp: Employee) => {
+    setDeleteConfirm({ open: true, id: emp.id, name: emp.name })
+  }
+
+  const handleConfirmDelete = () => {
+    deleteEmployee(deleteConfirm.id)
+    addToast(`Employee "${deleteConfirm.name}" deleted successfully`, 'success')
+    setDeleteConfirm({ open: false, id: '', name: '' })
   }
 
   return (
@@ -97,7 +123,7 @@ export function EmployeesPage() {
                         <Edit2 className="w-4 h-4" />
                       </Button>
                       <Button
-                        onClick={() => deleteEmployee(emp.id)}
+                        onClick={() => handleDeleteClick(emp)}
                         variant="ghost"
                         size="sm"
                         className="text-rose-600 hover:bg-rose-50"
@@ -112,6 +138,16 @@ export function EmployeesPage() {
           </table>
         </div>
       </Card>
+
+      <DeleteConfirmationDialog
+        open={deleteConfirm.open}
+        title="Delete Employee"
+        description={`Are you sure you want to delete "${deleteConfirm.name}"? This action cannot be undone.`}
+        onConfirm={handleConfirmDelete}
+        onCancel={() => setDeleteConfirm({ open: false, id: '', name: '' })}
+      />
+
+      <ToastContainer toasts={toasts} onRemove={removeToast} />
     </div>
   )
 }

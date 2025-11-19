@@ -1,3 +1,5 @@
+'use client'
+
 import { create } from 'zustand'
 import { useEffect, useState } from 'react'
 
@@ -77,6 +79,8 @@ interface DataStore {
     pendingTransactions: number
     totalIncome: number
   }
+  
+  setBatchData: (data: { employees: Employee[], customers: Customer[], transactions: Transaction[], salaryPayments: SalaryPayment[] }) => void
 }
 
 let metricsCache: ReturnType<DataStore['getMetrics']> | null = null
@@ -119,12 +123,20 @@ export const useDataStore = create<DataStore>((set, get) => ({
     const admin = SEEDED_ADMINS.find(a => a.username === username && a.password === password)
     if (admin) {
       set({ currentAdmin: admin })
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('admin_session', JSON.stringify(admin))
+      }
       return true
     }
     return false
   },
   
-  logout: () => set({ currentAdmin: null }),
+  logout: () => {
+    set({ currentAdmin: null })
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('admin_session')
+    }
+  },
 
   employees: [],
   customers: [],
@@ -287,6 +299,15 @@ export const useDataStore = create<DataStore>((set, get) => ({
     }
 
     return metricsCache!
+  },
+  
+  setBatchData: (data) => {
+    set({
+      employees: data.employees,
+      customers: data.customers,
+      transactions: data.transactions,
+      salaryPayments: data.salaryPayments,
+    })
   },
 }))
 
