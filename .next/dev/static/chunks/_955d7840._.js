@@ -51,23 +51,23 @@ async function fetchSalaryPayments() {
     if (!response.ok) throw new Error('Failed to fetch salary payments');
     return response.json();
 }
-const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])((set1, get)=>({
+const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zustand$2f$esm$2f$react$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["create"])((set, get)=>({
         currentAdmin: null,
         login: (username, password)=>{
             const admin = SEEDED_ADMINS.find((a)=>a.username === username && a.password === password);
             if (admin) {
-                set1({
+                set({
                     currentAdmin: admin
                 });
                 if ("TURBOPACK compile-time truthy", 1) {
-                    localStorage.setItem('admin_session', JSON.stringify(admin));
+                    localStorage.setItem('admin_session', '1');
                 }
                 return true;
             }
             return false;
         },
         logout: ()=>{
-            set1({
+            set({
                 currentAdmin: null
             });
             if ("TURBOPACK compile-time truthy", 1) {
@@ -84,7 +84,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
                 ...employee,
                 id
             };
-            set1((state)=>({
+            set((state)=>({
                     employees: [
                         ...state.employees,
                         newEmployee
@@ -99,7 +99,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
             }).catch(console.error);
         },
         updateEmployee: (id, employee)=>{
-            set1((state)=>({
+            set((state)=>({
                     employees: state.employees.map((e)=>e.id === id ? {
                             ...employee,
                             id
@@ -114,7 +114,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
             }).catch(console.error);
         },
         deleteEmployee: (id)=>{
-            set1((state)=>({
+            set((state)=>({
                     employees: state.employees.filter((e)=>e.id !== id)
                 }));
             fetch(`/api/employees/${id}`, {
@@ -127,7 +127,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
                 ...customer,
                 id
             };
-            set1((state)=>({
+            set((state)=>({
                     customers: [
                         ...state.customers,
                         newCustomer
@@ -142,7 +142,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
             }).catch(console.error);
         },
         updateCustomer: (id, customer)=>{
-            set1((state)=>({
+            set((state)=>({
                     customers: state.customers.map((c)=>c.id === id ? {
                             ...customer,
                             id
@@ -157,7 +157,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
             }).catch(console.error);
         },
         deleteCustomer: (id)=>{
-            set1((state)=>({
+            set((state)=>({
                     customers: state.customers.filter((c)=>c.id !== id)
                 }));
             fetch(`/api/customers/${id}`, {
@@ -170,7 +170,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
                 ...transaction,
                 id
             };
-            set1((state)=>({
+            set((state)=>({
                     transactions: [
                         ...state.transactions,
                         newTransaction
@@ -185,7 +185,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
             }).catch(console.error);
         },
         updateTransaction: (id, transaction)=>{
-            set1((state)=>({
+            set((state)=>({
                     transactions: state.transactions.map((t)=>t.id === id ? {
                             ...transaction,
                             id
@@ -200,7 +200,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
             }).catch(console.error);
         },
         deleteTransaction: (id)=>{
-            set1((state)=>({
+            set((state)=>({
                     transactions: state.transactions.filter((t)=>t.id !== id)
                 }));
             fetch(`/api/transactions/${id}`, {
@@ -213,7 +213,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
                 ...payment,
                 id
             };
-            set1((state)=>({
+            set((state)=>({
                     salaryPayments: [
                         ...state.salaryPayments,
                         newPayment
@@ -250,7 +250,7 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
             return metricsCache;
         },
         setBatchData: (data)=>{
-            set1({
+            set({
                 employees: data.employees,
                 customers: data.customers,
                 transactions: data.transactions,
@@ -261,34 +261,26 @@ const useDataStore = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
 function useInitializeStore() {
     _s();
     const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
-    const setEmployees = useDataStore({
-        "useInitializeStore.useDataStore[setEmployees]": (state)=>({
-                "useInitializeStore.useDataStore[setEmployees]": (employees)=>set({
-                        employees
-                    })
-            })["useInitializeStore.useDataStore[setEmployees]"]
-    }["useInitializeStore.useDataStore[setEmployees]"]);
-    const setCustomers = useDataStore({
-        "useInitializeStore.useDataStore[setCustomers]": (state)=>({
-                "useInitializeStore.useDataStore[setCustomers]": (customers)=>set({
-                        customers
-                    })
-            })["useInitializeStore.useDataStore[setCustomers]"]
-    }["useInitializeStore.useDataStore[setCustomers]"]);
-    const setTransactions = useDataStore({
-        "useInitializeStore.useDataStore[setTransactions]": (state)=>({
-                "useInitializeStore.useDataStore[setTransactions]": (transactions)=>set({
-                        transactions
-                    })
-            })["useInitializeStore.useDataStore[setTransactions]"]
-    }["useInitializeStore.useDataStore[setTransactions]"]);
-    const setSalaryPayments = useDataStore({
-        "useInitializeStore.useDataStore[setSalaryPayments]": (state)=>({
-                "useInitializeStore.useDataStore[setSalaryPayments]": (salaryPayments)=>set({
-                        salaryPayments
-                    })
-            })["useInitializeStore.useDataStore[setSalaryPayments]"]
-    }["useInitializeStore.useDataStore[setSalaryPayments]"]);
+    const setEmployees = (employees)=>{
+        useDataStore.setState({
+            employees
+        });
+    };
+    const setCustomers = (customers)=>{
+        useDataStore.setState({
+            customers
+        });
+    };
+    const setTransactions = (transactions)=>{
+        useDataStore.setState({
+            transactions
+        });
+    };
+    const setSalaryPayments = (salaryPayments)=>{
+        useDataStore.setState({
+            salaryPayments
+        });
+    };
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "useInitializeStore.useEffect": ()=>{
             async function initializeData() {
@@ -314,14 +306,7 @@ function useInitializeStore() {
     }["useInitializeStore.useEffect"], []);
     return isLoading;
 }
-_s(useInitializeStore, "rfHo0Qxvmmp1qDxU3b/R+jfpoV0=", false, function() {
-    return [
-        useDataStore,
-        useDataStore,
-        useDataStore,
-        useDataStore
-    ];
-});
+_s(useInitializeStore, "Yt82d/dvZsn5nYh5sqDQjv+rJ38=");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

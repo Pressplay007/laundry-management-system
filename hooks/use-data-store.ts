@@ -124,7 +124,8 @@ export const useDataStore = create<DataStore>((set, get) => ({
     if (admin) {
       set({ currentAdmin: admin })
       if (typeof window !== 'undefined') {
-        localStorage.setItem('admin_session', JSON.stringify(admin))
+       localStorage.setItem('admin_session', '1')
+
       }
       return true
     }
@@ -314,18 +315,22 @@ export const useDataStore = create<DataStore>((set, get) => ({
 // Custom hook to load initial data from database
 export function useInitializeStore() {
   const [isLoading, setIsLoading] = useState(true)
-  const setEmployees = useDataStore((state) => (employees: any) => 
-    set({ employees })
-  )
-  const setCustomers = useDataStore((state) => (customers: any) => 
-    set({ customers })
-  )
-  const setTransactions = useDataStore((state) => (transactions: any) => 
-    set({ transactions })
-  )
-  const setSalaryPayments = useDataStore((state) => (salaryPayments: any) => 
-    set({ salaryPayments })
-  )
+
+  const setEmployees = (employees: any) => {
+    useDataStore.setState({ employees })
+  }
+
+  const setCustomers = (customers: any) => {
+    useDataStore.setState({ customers })
+  }
+
+  const setTransactions = (transactions: any) => {
+    useDataStore.setState({ transactions })
+  }
+
+  const setSalaryPayments = (salaryPayments: any) => {
+    useDataStore.setState({ salaryPayments })
+  }
 
   useEffect(() => {
     async function initializeData() {
@@ -353,3 +358,4 @@ export function useInitializeStore() {
 
   return isLoading
 }
+
