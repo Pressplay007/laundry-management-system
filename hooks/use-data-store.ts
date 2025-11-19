@@ -1,4 +1,5 @@
 import { create } from 'zustand'
+import { useEffect, useState } from 'react'
 
 export interface Admin {
   id: string
@@ -86,6 +87,31 @@ const SEEDED_ADMINS: Admin[] = [
   { id: '2', username: 'manager', password: 'manager123', name: 'Manager' },
 ]
 
+// Fetch functions to load data from database
+async function fetchEmployees() {
+  const response = await fetch('/api/employees')
+  if (!response.ok) throw new Error('Failed to fetch employees')
+  return response.json()
+}
+
+async function fetchCustomers() {
+  const response = await fetch('/api/customers')
+  if (!response.ok) throw new Error('Failed to fetch customers')
+  return response.json()
+}
+
+async function fetchTransactions() {
+  const response = await fetch('/api/transactions')
+  if (!response.ok) throw new Error('Failed to fetch transactions')
+  return response.json()
+}
+
+async function fetchSalaryPayments() {
+  const response = await fetch('/api/salary-payments')
+  if (!response.ok) throw new Error('Failed to fetch salary payments')
+  return response.json()
+}
+
 export const useDataStore = create<DataStore>((set, get) => ({
   currentAdmin: null,
   
@@ -100,93 +126,136 @@ export const useDataStore = create<DataStore>((set, get) => ({
   
   logout: () => set({ currentAdmin: null }),
 
-  employees: [
-    { id: '1', name: 'Ahmad Khan', phone: '03001234567', role: 'Manager', salary: 50000, address: 'Karachi', status: 'active' },
-    { id: '2', name: 'Fatima Ali', phone: '03009876543', role: 'Staff', salary: 25000, address: 'Karachi', status: 'active' },
-  ],
-  customers: [
-    { id: '1', name: 'Hassan Ahmed', phone: '03101234567', address: 'Clifton', totalTransactions: 5 },
-    { id: '2', name: 'Zainab Khan', phone: '03109876543', address: 'Defence', totalTransactions: 3 },
-  ],
-  transactions: [
-    {
-      id: '1',
-      customerId: '1',
-      employeeId: '1',
-      weight: 5,
-      orderDate: '2025-01-15',
-      collectionDate: '2025-01-17',
-      amountToPay: 500,
-      amountPaid: 500,
-      balance: 0,
-      status: 'completed',
-    },
-    {
-      id: '2',
-      customerId: '2',
-      employeeId: '2',
-      weight: 3,
-      orderDate: '2025-01-16',
-      collectionDate: '2025-01-18',
-      amountToPay: 300,
-      amountPaid: 0,
-      balance: 300,
-      status: 'pending',
-    },
-  ],
-  salaryPayments: [
-    { id: '1', employeeId: '1', amount: 50000, paymentDate: '2025-01-01' },
-  ],
+  employees: [],
+  customers: [],
+  transactions: [],
+  salaryPayments: [],
 
-  addEmployee: (employee) =>
+  addEmployee: (employee) => {
+    const id = Date.now().toString()
+    const newEmployee = { ...employee, id }
+    
     set((state) => ({
-      employees: [...state.employees, { ...employee, id: Date.now().toString() }],
-    })),
+      employees: [...state.employees, newEmployee],
+    }))
+    
+    fetch('/api/employees', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(employee),
+    }).catch(console.error)
+  },
 
-  updateEmployee: (id, employee) =>
+  updateEmployee: (id, employee) => {
     set((state) => ({
       employees: state.employees.map((e) => (e.id === id ? { ...employee, id } : e)),
-    })),
+    }))
+    
+    fetch(`/api/employees/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(employee),
+    }).catch(console.error)
+  },
 
-  deleteEmployee: (id) =>
+  deleteEmployee: (id) => {
     set((state) => ({
       employees: state.employees.filter((e) => e.id !== id),
-    })),
+    }))
+    
+    fetch(`/api/employees/${id}`, {
+      method: 'DELETE',
+    }).catch(console.error)
+  },
 
-  addCustomer: (customer) =>
+  addCustomer: (customer) => {
+    const id = Date.now().toString()
+    const newCustomer = { ...customer, id }
+    
     set((state) => ({
-      customers: [...state.customers, { ...customer, id: Date.now().toString() }],
-    })),
+      customers: [...state.customers, newCustomer],
+    }))
+    
+    fetch('/api/customers', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(customer),
+    }).catch(console.error)
+  },
 
-  updateCustomer: (id, customer) =>
+  updateCustomer: (id, customer) => {
     set((state) => ({
       customers: state.customers.map((c) => (c.id === id ? { ...customer, id } : c)),
-    })),
+    }))
+    
+    fetch(`/api/customers/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(customer),
+    }).catch(console.error)
+  },
 
-  deleteCustomer: (id) =>
+  deleteCustomer: (id) => {
     set((state) => ({
       customers: state.customers.filter((c) => c.id !== id),
-    })),
+    }))
+    
+    fetch(`/api/customers/${id}`, {
+      method: 'DELETE',
+    }).catch(console.error)
+  },
 
-  addTransaction: (transaction) =>
+  addTransaction: (transaction) => {
+    const id = Date.now().toString()
+    const newTransaction = { ...transaction, id }
+    
     set((state) => ({
-      transactions: [...state.transactions, { ...transaction, id: Date.now().toString() }],
-    })),
+      transactions: [...state.transactions, newTransaction],
+    }))
+    
+    fetch('/api/transactions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(transaction),
+    }).catch(console.error)
+  },
 
-  updateTransaction: (id, transaction) =>
+  updateTransaction: (id, transaction) => {
     set((state) => ({
       transactions: state.transactions.map((t) => (t.id === id ? { ...transaction, id } : t)),
-    })),
+    }))
+    
+    fetch(`/api/transactions/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(transaction),
+    }).catch(console.error)
+  },
 
-  deleteTransaction: (id) =>
+  deleteTransaction: (id) => {
     set((state) => ({
       transactions: state.transactions.filter((t) => t.id !== id),
-    })),
+    }))
+    
+    fetch(`/api/transactions/${id}`, {
+      method: 'DELETE',
+    }).catch(console.error)
+  },
 
-  addSalaryPayment: (payment) =>
+  addSalaryPayment: (payment) => {
+    const id = Date.now().toString()
+    const newPayment = { ...payment, id }
+    
     set((state) => ({
-      salaryPayments: [...state.salaryPayments, { ...payment, id: Date.now().toString() }],
-    })),
+      salaryPayments: [...state.salaryPayments, newPayment],
+    }))
+    
+    fetch('/api/salary-payments', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payment),
+    }).catch(console.error)
+  },
 
   getMetrics: () => {
     const state = get()
@@ -220,3 +289,46 @@ export const useDataStore = create<DataStore>((set, get) => ({
     return metricsCache!
   },
 }))
+
+// Custom hook to load initial data from database
+export function useInitializeStore() {
+  const [isLoading, setIsLoading] = useState(true)
+  const setEmployees = useDataStore((state) => (employees: any) => 
+    set({ employees })
+  )
+  const setCustomers = useDataStore((state) => (customers: any) => 
+    set({ customers })
+  )
+  const setTransactions = useDataStore((state) => (transactions: any) => 
+    set({ transactions })
+  )
+  const setSalaryPayments = useDataStore((state) => (salaryPayments: any) => 
+    set({ salaryPayments })
+  )
+
+  useEffect(() => {
+    async function initializeData() {
+      try {
+        const [employees, customers, transactions, salaryPayments] = await Promise.all([
+          fetchEmployees(),
+          fetchCustomers(),
+          fetchTransactions(),
+          fetchSalaryPayments(),
+        ])
+
+        setEmployees(employees)
+        setCustomers(customers)
+        setTransactions(transactions)
+        setSalaryPayments(salaryPayments)
+      } catch (error) {
+        console.error('Error initializing data:', error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    initializeData()
+  }, [])
+
+  return isLoading
+}
