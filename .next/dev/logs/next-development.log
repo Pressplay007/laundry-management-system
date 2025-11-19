@@ -1,0 +1,2294 @@
+[00:00:03.342] Server  LOG     
+[00:00:03.342] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:03.343] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:03.343] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:03.343] Server  LOG     
+[00:00:03.343] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:03.343] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:03.343] Server  LOG     
+[00:00:03.500] Server  LOG      ✓ Ready in 3.1s
+[00:00:11.990] Server  LOG      ○ Compiling / ...
+[00:00:12.068] Server  ERROR    ⨯ ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:00:13.790] Browser ERROR   uncaughtError: Error: ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:00:13.930] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:00:14.033] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:01:10.238] Server  LOG      ✓ Compiled in 72ms
+[00:01:10.783] Server  ERROR    ⨯ Error: useNavigation must be used within NavigationProvider
+[00:01:11.041] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:12.356] Browser ERROR   uncaughtError: Error: useNavigation must be used within NavigationProvider
+[00:01:34.329] Server  ERROR    ⨯ Error: useNavigation must be used within NavigationProvider
+[00:01:34.487] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:34.737] Browser ERROR   uncaughtError: Error: useNavigation must be used within NavigationProvider
+[00:01:54.929] Server  ERROR    ⨯ Error: useNavigation must be used within NavigationProvider
+[00:01:55.101] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:55.551] Browser ERROR   uncaughtError: Error: useNavigation must be used within NavigationProvider
+[00:02:02.998] Server  ERROR    ⨯ Error: useNavigation must be used within NavigationProvider
+[00:02:03.149] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:03.358] Browser ERROR   uncaughtError: Error: useNavigation must be used within NavigationProvider
+[00:03:01.792] Server  LOG      ✓ Compiled in 45ms
+[00:03:01.793] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:03:01.793] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:01.793] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:03:01.931] Server  ERROR   (node:23571) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+[00:03:02.088] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:03.356] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:03:03.356] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:03:03.356] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539269651}
+[00:03:14.589] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539281596}
+[00:03:14.705] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539281714}
+[00:03:35.954] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539302879}
+[00:03:35.954] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539302961}
+[00:03:49.438] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539316361}
+[00:03:49.438] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539316445}
+[00:05:14.074] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:05:14.292] Server  LOG      ✓ Compiled in 58ms
+[00:05:16.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:05:16.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:05:16.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539402816}
+[00:05:26.282] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539413282}
+[00:05:26.429] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539413417}
+[00:05:45.629] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539432617}
+[00:05:45.760] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539432765}
+[00:06:18.746] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539465639}
+[00:06:18.746] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539465750}
+[00:06:28.529] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:06:28.529] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:06:28.529] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:06:28.529] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539475463}
+[00:06:28.529] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539475463}
+[00:08:10.463] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:08:10.730] Server  LOG      ✓ Compiled in 122ms
+[00:08:12.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:08:12.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:08:12.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539578926}
+[00:08:23.031] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539589949}
+[00:08:23.199] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539590202}
+[00:08:32.163] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:33.147] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:08:33.147] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:08:33.147] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539600157}
+[00:08:44.883] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:45.611] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:08:45.611] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:08:45.611] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539612621}
+[00:08:56.703] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539623710}
+[00:08:56.817] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539623824}
+[00:09:10.508] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539637421}
+[00:09:10.508] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539637514}
+[00:09:18.121] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539645028}
+[00:09:18.121] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539645128}
+[00:10:24.355] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:10:24.355] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:10:24.355] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:10:24.355] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:10:24.355] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:10:24.355] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:10:51.384] Server  LOG      ✓ Compiled in 131ms
+[00:11:08.352] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:11:08.352] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:11:08.355] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:11:08.355] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:11:08.355] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:11:08.355] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:11:10.355] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:11:10.355] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:11:10.355] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:11:10.355] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:11:10.355] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:11:10.355] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:11:11.839] Server  ERROR    ⨯ ReferenceError: DashboardView is not defined
+[00:11:11.859] Server  ERROR    ⨯ ReferenceError: DashboardView is not defined
+[00:11:11.880] Server  ERROR    ⨯ ReferenceError: DashboardView is not defined
+[00:11:12.355] Browser ERROR   uncaughtError: ReferenceError: DashboardView is not defined
+[00:11:12.356] Browser ERROR   uncaughtError: ReferenceError: DashboardView is not defined
+[00:11:12.360] Browser ERROR   uncaughtError: ReferenceError: DashboardView is not defined
+[00:11:19.537] Server  ERROR    ⨯ ReferenceError: im is not defined
+[00:11:19.813] Server  ERROR    ⨯ ReferenceError: im is not defined
+[00:11:20.236] Server  ERROR    ⨯ ReferenceError: im is not defined
+[00:11:20.496] Server  ERROR    ⨯ ReferenceError: im is not defined
+[00:11:20.498] Server  LOG      ✓ Compiled in 0ms
+[00:11:20.834] Server  ERROR    ⨯ ReferenceError: imp is not defined
+[00:11:21.077] Server  ERROR    ⨯ ReferenceError: imp is not defined
+[00:11:21.396] Browser ERROR   uncaughtError: ReferenceError: im is not defined
+[00:11:21.444] Browser ERROR   uncaughtError: ReferenceError: im is not defined
+[00:11:21.458] Browser ERROR   uncaughtError: ReferenceError: imp is not defined
+[00:11:23.355] Browser ERROR   ./app/page.tsx:3:1
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+  2 | import
+> 3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^
+  4 |
+  5 | export const metadata = {
+  6 |   title: 'Login - LaundryPro',
+
+Expected 'from', got 'import'
+[00:11:23.355] Browser ERROR   ./app/page.tsx:3:1
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+  2 | import
+> 3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^
+  4 |
+  5 | export const metadata = {
+  6 |   title: 'Login - LaundryPro',
+
+Expected 'from', got 'import'
+[00:11:23.355] Browser ERROR   ./app/page.tsx:3:1
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+  2 | import
+> 3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^
+  4 |
+  5 | export const metadata = {
+  6 |   title: 'Login - LaundryPro',
+
+Expected 'from', got 'import'
+[00:11:24.082] Server  LOG      ✓ Compiled in 170ms
+[00:11:24.545] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:11:24.791] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:11:25.070] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:11:25.344] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:25.378] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:26.356] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:11:26.356] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:11:27.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:11:28.355] Browser ERROR   ./app/page.tsx:2:25
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView  from '@/components/pages/dashboard'
+    |                         ^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Expected ',', got 'from'
+[00:11:28.355] Browser ERROR   ./app/page.tsx:2:25
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView  from '@/components/pages/dashboard'
+    |                         ^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Expected ',', got 'from'
+[00:11:28.355] Browser ERROR   ./app/page.tsx:2:25
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView  from '@/components/pages/dashboard'
+    |                         ^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Expected ',', got 'from'
+[00:11:29.891] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:11:30.131] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:11:30.383] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:11:31.071] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:31.084] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:31.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:11:31.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:11:32.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:11:46.884] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:11:47.204] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:11:47.454] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:11:48.292] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:48.321] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:49.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:11:49.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:11:49.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:11:52.353] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/
+    |                               ^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:11:52.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/
+    |                               ^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:11:52.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/
+    |                               ^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:11:55.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/
+    |                               ^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:11:55.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/
+    |                               ^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:11:55.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/
+    |                               ^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:01.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components
+    |                               ^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:01.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components
+    |                               ^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:01.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components
+    |                               ^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:03.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/
+    |                               ^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:03.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/
+    |                               ^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:03.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/
+    |                               ^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:05.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/pages
+    |                               ^^^^^^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:05.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/pages
+    |                               ^^^^^^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:05.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/pages
+    |                               ^^^^^^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:07.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/pages/
+    |                               ^^^^^^^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:07.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/pages/
+    |                               ^^^^^^^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:07.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/pages/
+    |                               ^^^^^^^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:09.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/pages/dashboard
+    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:09.355] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/pages/dashboard
+    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:09.356] Browser ERROR   ./app/page.tsx:2:31
+Parsing ecmascript source code failed
+  1 | import LoginPage from '@/components/pages/login'
+> 2 | import { DashboardView } from '@/components/pages/dashboard
+    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { NavigationProvider, AuthRedirect } from '@/context/navigation-context'
+  4 |
+  5 | export const metadata = {
+
+Unterminated string constant
+[00:12:13.050] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:12:13.377] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:12:13.628] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:12:14.011] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:14.012] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:15.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:12:15.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:12:15.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:12:18.110] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:18.110] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:18.110] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:18.487] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:19.048] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:20.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:20.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:20.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539826378}
+[00:12:20.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:20.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:20.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539826367}
+[00:12:20.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:20.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:12:20.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539826896}
+[00:12:33.253] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539840149}
+[00:12:33.253] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539840258}
+[00:12:43.299] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539850240}
+[00:12:43.299] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539850300}
+[00:12:50.097] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:03.908] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539870830}
+[00:13:03.908] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539870912}
+[00:13:14.032] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:14.471] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:13:14.472] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:13:14.472] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:13:14.472] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539881478}
+[00:13:14.472] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539881478}
+[00:13:26.976] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/pages/dashboard.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:13:27.094] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/pages/dashboard.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:13:27.460] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:13:27.470] Server  LOG      ✓ Compiled in 0ms
+[00:13:27.472] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/pages/dashboard.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:13:27.767] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:13:28.008] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:13:28.966] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:29.367] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:13:30.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:13:36.354] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:13:36.354] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:13:36.355] Browser ERROR   ./app/page.tsx:15:5
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |     ^
+  16 |   )
+  17 | }
+  18 |
+
+Expression expected
+[00:13:36.355] Browser ERROR   ./app/page.tsx:15:6
+Parsing ecmascript source code failed
+  13 |       <LoginPage />
+  14 |       <DashboardView
+> 15 |     </NavigationProvider>
+     |      ^^^^^^^^^^^^^^^^^^^^
+  16 |   )
+  17 | }
+  18 |
+
+Unterminated regexp literal
+[00:13:38.626] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:39.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:13:39.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:13:39.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539905812}
+[00:13:39.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:13:39.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:13:39.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539906207}
+[00:14:19.725] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:20.060] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:20.060] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/employees","route":"/employees"}
+[00:14:20.060] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/employees color: rgb(120, 120, 120) color: inherit {"dp":"/employees","o":"http://localhost:3001/employees","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539947048}
+[00:14:20.060] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539947059}
+[00:14:31.900] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:14:31.900] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:14:32.030] Server  LOG      ✓ Compiled in 27ms
+[00:14:33.081] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:33.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:33.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:14:33.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539960296}
+[00:14:34.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:34.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:14:34.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539960778}
+[00:14:46.082] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539972978}
+[00:14:46.082] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539973084}
+[00:15:06.166] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539993159}
+[00:15:06.305] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763539993303}
+[00:16:18.407] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:16:18.407] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:16:18.589] Server  LOG      ✓ Compiled in 64ms
+[00:16:19.061] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:20.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:20.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:16:20.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540067189}
+[00:16:21.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:21.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:16:21.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540067419}
+[00:16:32.339] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:32.931] Browser LOG     [v0] Starting data load from database...
+[00:16:32.931] Browser LOG     [v0] Starting data load from database...
+[00:16:33.946] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:16:34.128] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:16:34.235] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:16:34.295] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:34.538] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:34.538] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:16:34.538] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:16:34.538] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540081541}
+[00:16:34.538] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540081541}
+[00:17:00.266] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:01.003] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:17:01.076] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:17:01.142] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:17:01.165] Browser LOG     [v0] Starting data load from database...
+[00:17:01.165] Browser LOG     [v0] Starting data load from database...
+[00:17:01.566] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:02.420] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:17:02.421] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:17:02.421] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:17:02.421] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540109424}
+[00:17:02.421] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540109424}
+[00:20:25.029] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:20:25.030] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:20:26.431] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:27.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:20:27.355] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:21:30.389] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:30.389] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:31.999] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:32.381] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:21:32.386] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:21:32.402] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:32.403] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:32.645] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:32.645] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:21:32.716] Server  LOG      ✓ Compiled in 0ms
+[00:21:33.084] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:34.455] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:21:34.455] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Page`.
+[00:21:49.560] Server  LOG      ✓ Compiled in 176ms
+[00:21:50.352] Browser ERROR   ./app/layout.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/layout.tsx [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/layout.tsx [Client Component SSR]
+    ./app/layout.tsx [Server Component]
+[00:21:50.352] Browser ERROR   ./app/layout.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/layout.tsx [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/layout.tsx [Client Component SSR]
+    ./app/layout.tsx [Server Component]
+[00:21:50.352] Browser ERROR   ./app/layout.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/layout.tsx [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/layout.tsx [Client Component SSR]
+    ./app/layout.tsx [Server Component]
+[00:21:50.352] Browser ERROR   ./app/layout.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/layout.tsx [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/layout.tsx [Client Component SSR]
+    ./app/layout.tsx [Server Component]
+[00:22:16.040] Server  ERROR    ⨯ Error: useNavigation must be used within NavigationProvider
+[00:22:16.067] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:22:16.067] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:22:16.080] Server  ERROR    ⨯ Error: useNavigation must be used within NavigationProvider
+[00:22:16.139] Server  ERROR    ⨯ Error: useNavigation must be used within NavigationProvider
+[00:22:17.321] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:18.355] Browser ERROR   uncaughtError: Error: useNavigation must be used within NavigationProvider
+[00:22:18.355] Browser ERROR   uncaughtError: Error: useNavigation must be used within NavigationProvider
+[00:22:38.794] Server  LOG      ✓ Compiled in 91ms
+[00:22:39.352] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:39.352] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:39.352] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:39.352] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:42.355] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:42.355] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:42.355] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:42.355] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:44.249] Server  LOG      ✓ Compiled in 13ms
+[00:22:44.355] Browser ERROR   ./app/page.tsx:15:1
+Ecmascript file had an error
+  13 | import { NavigationProvider } from '@/context/navigation-context'
+  14 |
+> 15 | export default function App() {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |   return (
+     | ^^^^^^^^^^
+> 17 |     <NavigationProvider>
+     | ^^^^^^^^^^
+> 18 |       <AuthRedirect />
+     | ^^^^^^^^^^
+> 19 |       <LoginPage />
+     | ^^^^^^^^^^
+> 20 |     </NavigationProvider>
+     | ^^^^^^^^^^
+> 21 |   )
+     | ^^^^^^^^^^
+> 22 | }     
+     | ^^
+
+the name `default` is exported multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:44.355] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:44.355] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:44.356] Browser ERROR   ./app/page.tsx:15:1
+Ecmascript file had an error
+  13 | import { NavigationProvider } from '@/context/navigation-context'
+  14 |
+> 15 | export default function App() {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 16 |   return (
+     | ^^^^^^^^^^
+> 17 |     <NavigationProvider>
+     | ^^^^^^^^^^
+> 18 |       <AuthRedirect />
+     | ^^^^^^^^^^
+> 19 |       <LoginPage />
+     | ^^^^^^^^^^
+> 20 |     </NavigationProvider>
+     | ^^^^^^^^^^
+> 21 |   )
+     | ^^^^^^^^^^
+> 22 | }     
+     | ^^
+
+the name `default` is exported multiple times
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:44.356] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:44.356] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:47.717] Server  LOG      ✓ Compiled in 12ms
+[00:22:48.355] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:48.356] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:48.356] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-client] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:48.356] Browser ERROR   ./app/page.tsx:3:1
+Export AuthRedirect doesn't exist in target module
+  1 | 'use client'
+  2 | import LoginPage from '@/components/pages/login'
+> 3 | import { AuthRedirect } from '@/context/navigation-context'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | export default function Page() {
+  6 |   return (
+
+The export AuthRedirect was not found in module [project]/context/navigation-context.tsx [app-ssr] (ecmascript).
+Did you mean to import useNavigation?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:56.275] Server  LOG      ✓ Compiled in 11ms
+[00:22:57.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:22:57.356] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:00.077] Server  LOG      ✓ Compiled in 106ms
+[00:23:00.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:00.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:08.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:08.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:31.335] Server  ERROR    ⨯ ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:23:32.247] Browser ERROR   uncaughtError: Error: ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:23:32.450] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:32.450] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:33.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:33.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:36.854] Server  LOG      ✓ Compiled in 95ms
+[00:23:36.955] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:37.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:38.043] Server  ERROR    ⨯ ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:23:38.356] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:38.754] Browser ERROR   uncaughtError: Error: ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:23:38.985] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:38.985] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:39.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:48.026] Server  LOG      ✓ Compiled in 28ms
+[00:23:48.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:48.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:50.178] Server  LOG      ✓ Compiled in 27ms
+[00:23:50.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:50.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:52.122] Server  ERROR    ⨯ ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:23:52.357] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:52.886] Browser ERROR   uncaughtError: Error: ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:23:53.105] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:53.105] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:53.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:11.198] Server  LOG      ✓ Compiled in 27ms
+[00:24:11.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:11.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:13.288] Server  LOG      ✓ Compiled in 30ms
+[00:24:14.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:14.355] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:15.573] Server  LOG      ✓ Compiled in 45ms
+[00:24:16.335] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:24:16.356] Browser ERROR   ./app/page.tsx:4:14
+Ecmascript file had an error
+  2 | import LoginPage from '@/components/pages/login'
+  3 |
+> 4 | export const metadata = {
+    |              ^^^^^^^^
+  5 |   title: 'Login - LaundryPro',
+  6 |   description: 'Admin login page',
+  7 | }
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:25:29.964] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:25:29.992] Server  LOG      ✓ Compiled in 25ms
+[00:25:30.326] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:25:30.326] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:25:31.821] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:32.265] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:32.265] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:25:32.265] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540619248}
+[00:25:33.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:33.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:25:33.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540619820}
+[00:25:38.119] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:38.759] Browser LOG     [v0] Starting data load from database...
+[00:25:38.759] Browser LOG     [v0] Starting data load from database...
+[00:25:38.921] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:39.020] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:39.116] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:39.615] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:40.409] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:40.409] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:25:40.409] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:25:40.409] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540627388}
+[00:25:40.409] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540627389}
+[00:25:47.257] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:25:47.257] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:25:47.641] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:48.974] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:48.974] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:25:48.974] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540635956}
+[00:25:49.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:49.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:25:49.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540636329}
+[00:25:56.480] Browser LOG     [v0] Starting data load from database...
+[00:25:56.480] Browser LOG     [v0] Starting data load from database...
+[00:25:56.481] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540643438}
+[00:25:56.638] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:56.721] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:56.831] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:57.084] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:57.257] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:57.265] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540644004}
+[00:25:57.363] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:57.471] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:57.729] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:25:57.732] Browser LOG     [v0] Data loaded from database
+[00:25:57.732] Browser LOG     [v0] Store updated successfully
+[00:25:57.851] Browser LOG     [v0] Data loaded from database
+[00:25:57.851] Browser LOG     [v0] Store updated successfully
+[00:26:07.490] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:26:07.490] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:26:08.635] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:08.908] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:26:08.908] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:26:08.908] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540655889}
+[00:26:10.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:26:10.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:26:10.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540656448}
+[00:26:17.304] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:17.719] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:26:17.821] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:26:17.917] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:26:18.287] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:19.161] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:26:19.161] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/dashboard","route":"/dashboard"}
+[00:26:19.161] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:26:19.161] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540666140}
+[00:26:19.161] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540666140}
+[00:30:23.561] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:30:23.562] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./context/navigation-context.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:30:23.780] Server  LOG      ✓ Compiled in 110ms
+[00:30:25.887] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:27.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:30:27.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:30:27.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540913373}
+[00:30:27.355] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:30:27.355] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:30:27.355] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540913365}
+[00:30:42.784] Browser LOG     [v0] Starting data load from database...
+[00:30:42.784] Browser LOG     [v0] Starting data load from database...
+[00:30:42.784] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540929701}
+[00:30:43.001] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:30:43.088] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:30:43.183] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:30:43.239] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:30:43.346] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:30:43.456] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:30:43.580] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:30:43.589] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540930373}
+[00:30:43.589] Browser LOG     [v0] Data loaded from database
+[00:30:43.589] Browser LOG     [v0] Store updated successfully
+[00:30:43.679] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:30:43.854] Browser LOG     [v0] Data loaded from database
+[00:30:43.854] Browser LOG     [v0] Store updated successfully
+[00:31:07.534] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:31:07.538] Browser LOG     [v0] Starting data load from database...
+[00:31:07.538] Browser LOG     [v0] Starting data load from database...
+[00:31:07.538] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540954336}
+[00:31:07.622] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:31:07.768] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:31:07.884] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:31:07.889] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763540954720}
+[00:31:08.136] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:31:08.234] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:31:08.306] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:31:08.307] Browser LOG     [v0] Data loaded from database
+[00:31:08.307] Browser LOG     [v0] Store updated successfully
+[00:31:08.381] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:31:08.514] Browser LOG     [v0] Data loaded from database
+[00:31:08.514] Browser LOG     [v0] Store updated successfully
+[00:32:10.554] Browser LOG     [v0] Starting data load from database...
+[00:32:10.554] Browser LOG     [v0] Starting data load from database...
+[00:32:10.554] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763541017494}
+[00:32:10.677] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:32:10.794] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:32:10.897] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:32:11.014] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:32:11.335] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:32:11.425] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:32:11.455] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763541018136}
+[00:32:11.455] Browser LOG     [v0] Data loaded from database
+[00:32:11.455] Browser LOG     [v0] Store updated successfully
+[00:32:11.517] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:32:11.714] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:32:11.875] Browser LOG     [v0] Data loaded from database
+[00:32:11.875] Browser LOG     [v0] Store updated successfully
+[00:55:32.081] Browser LOG     [v0] Starting data load from database...
+[00:55:32.081] Browser LOG     [v0] Starting data load from database...
+[00:55:32.082] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/dashboard color: rgb(120, 120, 120) color: inherit {"dp":"/dashboard","o":"http://localhost:3001/dashboard","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763542419105}
+[00:55:32.365] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:55:32.551] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:55:32.645] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:55:32.818] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:55:33.605] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:55:33.772] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:55:33.848] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:55:33.917] Server  ERROR    ⨯ Error: No database connection string was provided to `neon()`. Perhaps an environment variable has not been set?
+[00:55:33.931] Browser LOG     [v0] Data loaded from database
+[00:55:33.931] Browser LOG     [v0] Store updated successfully
+[00:55:33.931] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3001/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763542420571}
+[00:55:34.091] Browser LOG     [v0] Data loaded from database
+[00:55:34.091] Browser LOG     [v0] Store updated successfully
+[00:57:24.751] Server  LOG        Reload env: .env

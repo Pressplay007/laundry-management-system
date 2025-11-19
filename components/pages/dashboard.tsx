@@ -26,7 +26,7 @@ function DashboardView() {
   const recentTransactions = transactions.slice(-5).reverse()
 
   return (
-    <div className="p-8 bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen">
+    <div className="p-8 bg-linear-to-br from-slate-50 to-slate-100 min-h-screen">
       <h1 className="text-3xl font-bold text-slate-900 mb-8">Dashboard</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
